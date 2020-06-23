@@ -12,11 +12,12 @@ resource "ibm_lbaas" "lbaas" {
     load_balancing_method = "round_robin"
   }
 
-  server_instances {
-    private_ip_address = "75.126.255.2"
-  }
+resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
+  count              = 2
+  private_ip_address = "75.126.255.2"
+  weight             = 40
+  lbaas_id           = "${ibm_lbaas.lbaas.id}"
+  depends_on         = ["ibm_lbaas.lbaas.id"]
 }
 
-data "ibm_lbaas" "tfacc_lbaas" {
-  name = "test"
-}
+  }
