@@ -16,9 +16,7 @@ resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
   count              = 1
   private_ip_address = "75.126.255.2"
   weight             = 40
-#  lbaas_id           = "${ibm_lbaas.lbaas.id}"
-  lbaas_id           = ibm_lbaas.lbaas.id
-#  depends_on         = ["ibm_lbaas.lbaas.id"]
+  lbaas_id           = "ibm_lbaas.lbaas.id"
 }
 
   }
