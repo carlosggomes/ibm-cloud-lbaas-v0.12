@@ -11,6 +11,7 @@ resource "ibm_lbaas" "lbaas" {
     backend_port          = 80
     load_balancing_method = "round_robin"
   }
+}
 
 resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
   count              = 1
@@ -18,5 +19,3 @@ resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
   weight             = 40
   lbaas_id           = "ibm_lbaas.lbaas.id"
 }
-
-  }
