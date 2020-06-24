@@ -1,6 +1,6 @@
 variable "iaas_classic_username" {}
 variable "iaas_classic_api_key" {}
-region "region" {}
+variable "region" {}
 variable "ibmcloud_api_key" {}
 
 provider "ibm" {
