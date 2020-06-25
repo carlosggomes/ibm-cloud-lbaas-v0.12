@@ -1,6 +1,7 @@
 resource "ibm_lbaas" "lbaas" {
   name        = "test"
   description = "updated desc-used for terraform uat"
+  type        = "PRIVATE"
   subnets     = [2088037]
 
   protocols {
