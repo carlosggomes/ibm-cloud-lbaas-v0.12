@@ -2,7 +2,6 @@ resource "ibm_lbaas" "lbaas" {
   name        = "test"
   description = "updated desc-used for terraform uat"
   subnets     = [2367048]
-#  datacenter  = "dal13"
 
   protocols {
     frontend_protocol     = "HTTP"
