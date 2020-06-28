@@ -2,6 +2,7 @@ resource "ibm_lbaas" "lbaas" {
   name        = "lbaas-cguarany4"
   description = "created-by-schematics - IP Private Portable"
   type        = "PRIVATE"
+  datacenter   = "SAO01"
   subnets     = [1899581]
 
   protocols {
