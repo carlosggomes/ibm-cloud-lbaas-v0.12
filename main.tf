@@ -1,8 +1,8 @@
 resource "ibm_lbaas" "lbaas" {
-  name        = "lbaas-cguarany3"
-  description = "created-by-schematics"
+  name        = "lbaas-cguarany4"
+  description = "created-by-schematics - IP Private Portable"
   type        = "PRIVATE"
-  subnets     = [2088037]
+  subnets     = [1899581]
 
   protocols {
     frontend_protocol     = "HTTP"
@@ -15,7 +15,7 @@ resource "ibm_lbaas" "lbaas" {
 
 resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
   count              = 1
-  private_ip_address = "10.95.118.234"
+  private_ip_address = "10.151.50.54"
   weight             = 40
   lbaas_id           = ibm_lbaas.lbaas.id
 }
