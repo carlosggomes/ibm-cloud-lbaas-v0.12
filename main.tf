@@ -1,6 +1,3 @@
-variable "lbaas_member_ip_1" {}
-variable "lbaas_member_ip_2" {}
-
 resource "ibm_lbaas" "lbaas" {
   name        = "lbaas-cguarany4"
   description = "created-by-schematics - IP Private Portable"
@@ -18,8 +15,8 @@ resource "ibm_lbaas" "lbaas" {
 }
 
 resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
-  count              = 2
-  private_ip_address = var.lbaas_member_ip_*
+  count              = 1
+  private_ip_address = "10.151.35.202"
   weight             = 40
   lbaas_id           = ibm_lbaas.lbaas.id  
   }
