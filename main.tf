@@ -19,7 +19,7 @@ resource "ibm_lbaas" "lbaas" {
 
 resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
   count              = 2
-  private_ip_address = element(lbas_member_ip_*,count.index)
+  private_ip_address = var.lbaas_member_ip_*
   weight             = 40
   lbaas_id           = ibm_lbaas.lbaas.id  
   }
