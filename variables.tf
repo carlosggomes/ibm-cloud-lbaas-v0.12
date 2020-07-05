@@ -33,6 +33,7 @@ variable "lbaas-subnet" {
 }
 
 variable "lbaas-member-count" {
+  type = string
   default = "2"
 }
 
