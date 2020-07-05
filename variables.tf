@@ -1,19 +1,11 @@
 
 
-variable "name" {
-  default = "terraformLbaasExample"
+variable "lbaas-name" {
+  default = "appname"
 }
 
-variable "notes" {
-  default = "for lbaas test"
-}
-
-variable "osref" {
-  default = "UBUNTU_16_64"
-}
-
-variable "domain" {
-  default = "ibm.com"
+variable "lbaas-notes" {
+  default = "Load Balance Description - Private-Private"
 }
 
 variable "lb_method" {
@@ -25,15 +17,17 @@ variable "subnet_id" {
 }
 
 variable "datacenter" {
-  default = "dal10"
+  default = "sao01"
 }
 
-variable "vm-post-install-script-uri" {
-  default = "https://raw.githubusercontent.com/hkantare/test/master/nginx.sh"
+variable "tls-id" {
+  default = "270088"
 }
 
-variable "hostname" {
-  default = "lbaas-example"
+variable "lbaas-type" {
+  default = "PRIVATE"
 }
 
-© 2020 GitHub, Inc.
+variable "lbaas-subnet" {
+  default = "1850273"
+}

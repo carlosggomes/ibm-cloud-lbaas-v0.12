@@ -1,16 +1,16 @@
 resource "ibm_lbaas" "lbaas" {
-  name        = "lbaas-cguarany4"
-  description = "created-by-schematics - IP Private Portable"
-  type        = "PRIVATE"
-  subnets     = [1850273]
+  name        = var.lbaas-name
+  description = var.lbaas-notes
+  type        = var.lbaas-type
+  subnets     = var.lbaas-subnet
 
   protocols {
     frontend_protocol     = "HTTPS"
     frontend_port         = 443
     backend_protocol      = "HTTP"
     backend_port          = 80
-    load_balancing_method = "round_robin"
-    tls_certificate_id    = 270088
+    load_balancing_method = var.lb_method
+    tls_certificate_id    = var.tls-id
   }
 }
 
