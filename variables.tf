@@ -36,3 +36,8 @@ variable "lbaas-member-count" {
   type = number
   default = "2"
 }
+
+variable "lbass-member-ips" {
+    type    = list
+    default = ["10.151.35.202", "10.151.35.203", "10.151.35.204"]
+}
