@@ -2,7 +2,7 @@ resource "ibm_lbaas" "lbaas" {
   name        = var.lbaas-name
   description = var.lbaas-notes
   type        = var.lbaas-type
-  subnets     = var.lbaas-subnet
+  subnets     = [var.lbaas-subnet]
 
   protocols {
     frontend_protocol     = "HTTPS"
