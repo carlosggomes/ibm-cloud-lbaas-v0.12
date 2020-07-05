@@ -31,3 +31,8 @@ variable "lbaas-type" {
 variable "lbaas-subnet" {
   default = "1850273"
 }
+
+variable "lbaas-member-count" {
+  type = number
+  default = "2"
+}

@@ -15,7 +15,7 @@ resource "ibm_lbaas" "lbaas" {
 }
 
 resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
-  count              = 2
+  count              = var.lbaas-member-count
   private_ip_address = element(["10.151.35.202", "10.151.35.203", "10.151.35.204"], count.index)
   weight             = 40
   lbaas_id           = ibm_lbaas.lbaas.id  
