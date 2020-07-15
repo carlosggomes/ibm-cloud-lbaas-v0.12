@@ -27,7 +27,7 @@ variable "lbaas-type" {
   default = "PRIVATE"
 }
 
-# To get the SUBNET ID use the IBM Cloud CLI command >> ibmcloud sl subnet list
+# To get the SUBNET ID use the IBM Cloud CLI command >> ibmcloud sl subnet list >> NEED TO BE A PRIMARY SUBNET <<
 variable "lbaas-subnet" {
   default = "1850273"
 }
